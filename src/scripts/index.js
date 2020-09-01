@@ -1,7 +1,6 @@
-import '../styles/index.scss';
+import Embedder from './Embedder';
 
-if (process.env.NODE_ENV === 'development') {
-  require('../index.html');
-}
-
-console.log('webpack starterkit');
+document.addEventListener("DOMContentLoaded", () => {
+  const embedder = new Embedder();
+  embedder.createWidgets();
+});
